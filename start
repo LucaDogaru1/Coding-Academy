@@ -1,0 +1,5 @@
+#!bin/bash
+docker compose up -d
+echo "frontend is here: http://localhost:9033"
+echo "database is here: http://localhost:8020"
+docker compose exec CodingExercise bash

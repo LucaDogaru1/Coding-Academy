@@ -4,18 +4,19 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('calenders', function (Blueprint $table) {
+
+        Schema::create('sport_events', function (Blueprint $table) {
+
             $table->id();
-            $table->date('date');
-            $table->time('time');
-            $table->foreignId('sport_id')->nullable()->constrained()->nullOnDelete();
+            $table->date('date')->nullable();
+            $table->time('time')->nullable();
+            $table->foreignId('sports_id')->nullable()->constrained()->nullOnDelete();
             $table->timestamps();
         });
     }

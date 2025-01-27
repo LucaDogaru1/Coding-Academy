@@ -9,10 +9,14 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
     public function up(): void
     {
         Schema::create('sports', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 100);
+            $table->string('home_team')->nullable();
+            $table->string('away_team')->nullable();
             $table->timestamps();
         });
     }

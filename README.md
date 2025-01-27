@@ -1,3 +1,9 @@
 Calender app for Coding Academy, 
 Includes Docker
-start the program with "sh start"
+
+
+** information on how to run it **
+  #run in console#
+-sh start
+-php artisan migrate
+-php artisan app:get-data-into-database
